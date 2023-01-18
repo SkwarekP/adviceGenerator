@@ -1,0 +1,81 @@
+body {
+    font-size:28px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 800;
+    background: hsl(218, 23%, 16%);
+    margin:0;
+    padding:0;
+}
+body, *, *::before, *::after {
+    box-sizing: border-box;
+}
+.card__position {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.card__container {
+    padding:2rem 1rem 3rem;
+    background: hsl(217, 19%, 24%);
+    border-radius:15px;
+    max-width:350px;
+    position:relative;
+}
+.header {
+    font-size:.7rem;
+    text-align:center;
+    letter-spacing: 2px;
+    color:hsl(150, 100%, 66%);
+    opacity:0.8;
+}
+.card__advice__text {
+    text-align:center;
+    color:hsl(193, 38%, 86%);
+    font-size:1.6rem;
+
+}
+.line__pause {
+    text-align: center;
+}
+.circle__btn {
+    background:hsl(150, 100%, 66%);
+    border:none;
+    padding:1.25rem;
+    border-radius:50%;
+    position:absolute;
+    left:50%;
+    bottom:-40px;
+    transform:translateX(-50%);
+    cursor: pointer;
+}
+.circle__btn:hover {
+    box-shadow:hsl(150, 100%, 66%) 0 5px 20px, hsl(150, 100%, 66%) 0 5px 20px, hsl(150, 100%, 66%) 0 5px 20px;
+}
+.line__pause__desktop {
+    display:none;
+}
+.card__error {
+    padding:1rem;
+    background:white;
+    border:1px solid red;
+    border-radius:20px;
+    width:70%;
+    margin:0 auto;
+}
+.card__error p {
+    color:red;
+}
+
+@media (min-width:768px) {
+    .card__container {
+        padding:2rem 2rem 3rem;
+        max-width:500px;
+    }
+    .line__pause {
+        display:none;
+    }
+    .line__pause__desktop {
+        display:block;
+    }
+}
