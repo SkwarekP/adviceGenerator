@@ -22,11 +22,12 @@ function App() {
         fetchdata().catch(err => {
             setError(err);
         });
+        // eslint-disable-next-line
     }, [])
 
     const randomAdviceHandler = (e) => {
         e.preventDefault();
-        let id = Math.floor(Math.random() * 200 + 1)
+        id = Math.floor(Math.random() * 200 + 1)
         async function fetchdata() {
             const response = await fetch(`https://api.adviceslip.com/advice/${id}`, {
                 method: "GET",
